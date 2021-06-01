@@ -10,9 +10,9 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
+          {/* <Route exact path="/" component={Home} /> */}
+          {/* <Route path="/login" component={Login} /> */}
+          {/* <Route path="/register" component={Register} /> */}
           <Route path="/employes" component={Employes} />
           {/* <Route component={NotFound} /> */}
         </Switch>
