@@ -26,6 +26,9 @@ code {
   font-family: 'PoetsenOne';
 }
 
+main {
+  background-color: #34475faf;
+}
 .sectionHome {
   background-image: url(./images/colaborador.jpeg);
   background-position: center;
@@ -35,13 +38,34 @@ code {
   flex-direction: column;
   align-items: center;  
   justify-content: center;
-  width: 1300px;
+  width: 900px;
   height: 550px;
 }
 
 .sectionHome h1 {
   color: aliceblue;
   font-size: 1.9em;
+  margin-bottom: 45px;
+}
+
+.homeLinks {
+  display: flex;
+  align-items: flex-start;
+  background-color: #34475F;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+.homeLinks a {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homeLinks a:hover {
+  color: green;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main {
