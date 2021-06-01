@@ -1,10 +1,11 @@
-import Register from "./Pages/Register";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import Register from "./Pages/Register";
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Employes from "./Pages/Employes";
 
 function App() {
   return (
     <div>
-      <Router>
+      {/* <Router>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
@@ -12,7 +13,9 @@ function App() {
           <Route path="/employes" component={Employes} />
           <Route component={NotFound} />
         </Switch>
-      </Router>
+      </Router> */}
+      {/* <Register /> */}
+      <Employes />
     </div>
   );
 }
