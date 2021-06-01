@@ -1,10 +1,17 @@
 .sectionHome {
-  /* background-image: url(./images/colaborador.jpeg); */
+  background-image: url(./images/colaborador.jpeg);
   background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-items: center;
+  align-items: center;  
+  justify-content: center;
   width: 450px;
   height: 550px;
+}
+
+.sectionHome h1 {
+  color: aliceblue;
+  font-size: 1.9em;
 }

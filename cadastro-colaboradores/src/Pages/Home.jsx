@@ -9,9 +9,11 @@ class Home extends React.Component {
     render() { 
         return (
             <section className="sectionHome">
-                <h1>Cadastro de Colaboradores</h1>
-                <Link to="/login">Login</Link>
-                <Link to="/register">Cadastro</Link>
+                <div>
+                    <h1>Cadastro de Colaboradores</h1>
+                    <Link to="/login">Login</Link>
+                    <Link to="/register">Cadastro</Link>
+                </div>
             </section>
         );
     }
