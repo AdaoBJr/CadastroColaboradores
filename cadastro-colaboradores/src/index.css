@@ -26,6 +26,24 @@ code {
   font-family: 'PoetsenOne';
 }
 
+.sectionHome {
+  background-image: url(./images/colaborador.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  width: 1300px;
+  height: 550px;
+}
+
+.sectionHome h1 {
+  color: aliceblue;
+  font-size: 1.9em;
+}
+
 .main {
   display: flex;
   justify-content: center;
