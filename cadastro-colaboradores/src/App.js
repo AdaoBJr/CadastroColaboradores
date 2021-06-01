@@ -1,5 +1,9 @@
 import Register from "./Pages/Register";
+import Login from './Pages/Login';
+import Home from './Pages/Home';
+import Employes from './Pages/Employes';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './App.css';
 
 function App() {
   return (
@@ -10,7 +14,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/employes" component={Employes} />
-          <Route component={NotFound} />
+          {/* <Route component={NotFound} /> */}
         </Switch>
       </Router>
     </div>
