@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Register extends Component {
   render() {
@@ -49,7 +50,15 @@ class Register extends Component {
               <button
               type="button"
               >
-                Cadastrados
+                <Link to="/employes">
+                  Cadastrados
+                </Link>
+              </button>
+              <button
+                type='submit'>
+                  <Link to="/">
+                      Home
+                  </Link>
               </button>
             </div>
           </div>
