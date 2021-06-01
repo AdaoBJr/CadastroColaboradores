@@ -7,7 +7,15 @@ class Login extends React.Component {
     }
     render() { 
         return (
-            <section>Login</section>
+            <section>
+                <form action="GET">
+                    <label htmlFor="email">Email: </label>
+                    <input type="text" name="email" id="email" />
+                    <label htmlFor="senha">Senha: </label>
+                    <input type="text" name="senha" id="senha" />
+                    <button type='submit'>Acessar</button>
+                </form>
+            </section>
         );
     }
 }
