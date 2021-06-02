@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
 
 class Employes extends Component {
   render() {
-    const employes = ['Adão Jr', 'Junior Henrique', 'Pedro Amaral']
+    // const employes = ['Adão Jr', 'Junior Henrique', 'Pedro Amaral']
+    const { employees } = this.props;
     return (
       <div className="main">
           <div className="Employes">
             <h2>COLABORADORES CADASTRADOS</h2>
-            {employes.map((employe) => (
+            {employees.map(({ name }) => (
               <div className="employesNames">
-                <h3>{employe}</h3>
+                <h3>{name}</h3>
               </div>
             ))}
           <div className="buttonsEmployes">
@@ -35,4 +37,8 @@ class Employes extends Component {
   }
 }
 
-export default Employes;
+const mapStateToProps = (state) => ({
+  employees: state.register.employees,
+});
+
+export default connect(mapStateToProps)(Employes);

@@ -1,9 +1,28 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import employeesActions from  '../actions/employeesActions';
 
 class Register extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       name: '',
+       password: '',
+       email: '',
+    }
+  }
+  
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({
+      [name]: value,
+    });
+  }
+
   render() {
+    const { name, password, email } = this.state;
+    const { registerEmployee } = this.props;
     return (
       <div className="main">
           <div className="RegisterPage">
@@ -17,6 +36,7 @@ class Register extends Component {
                   name="name"
                   type="text"
                   placeholder="Adicione o nome do colaborador"
+                  onChange={this.handleChange}
                 />
               </label>
               <br />
@@ -25,9 +45,10 @@ class Register extends Component {
               <br />
                 <input
                   className="inputRegister"
-                  name="senha"
+                  name="password"
                   type="password"
                   placeholder="Adicione uma senha"
+                  onChange={this.handleChange}
                 />
               </label>
               <br />
@@ -39,12 +60,14 @@ class Register extends Component {
                   name="email"
                   type="e-mail"
                   placeholder="Adicione um e-mail válido"
+                  onChange={this.handleChange}
                 />
               </label>
             </form>
             <div className="buttonsRegister">
               <button
               type="button"
+              onClick={ () => registerEmployee(name, password, email) }
               >
                 Cadastrar
               </button>
@@ -58,7 +81,7 @@ class Register extends Component {
               <button
                 type='submit'>
                   <Link to="/">
-                      Home
+                    Home
                   </Link>
               </button>
             </div>
@@ -70,8 +93,8 @@ class Register extends Component {
 
 const mapDispatchToProps = (dispatch) => ({
   registerEmployee: (name, password, email) => dispatch(
-    // employeesActions(name, password, email),
+    employeesActions(name, password, email),
   ),
 });
 
-export default connect(mapDispatchToProps)(Register);
+export default connect(null, mapDispatchToProps)(Register);
