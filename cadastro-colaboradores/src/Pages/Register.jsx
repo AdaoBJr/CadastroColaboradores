@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class Register extends Component {
@@ -25,7 +26,7 @@ class Register extends Component {
                 <input
                   className="inputRegister"
                   name="senha"
-                  type="text"
+                  type="password"
                   placeholder="Adicione uma senha"
                 />
               </label>
@@ -67,4 +68,10 @@ class Register extends Component {
   }
 }
 
-export default Register;
+const mapDispatchToProps = (dispatch) => ({
+  registerEmployee: (name, password, email) => dispatch(
+    // employeesActions(name, password, email),
+  ),
+});
+
+export default connect(mapDispatchToProps)(Register);
