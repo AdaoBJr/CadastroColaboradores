@@ -1,4 +1,4 @@
-<p align="center"><img width='150px' src='https://img-premium.flaticon.com/png/512/1184/premium/1184722.png?token=exp=1627567630~hmac=81bfee52687ed2af038b60007cca53ff' />
+<p align="center"><img width='150px' src='https://github.com/AdaoBJr/CadastroColaboradores/blob/main/src/images/work3.png' />
 <h1 align="center"> Cadastro de Colaboradores - Redux </h1>  </p>
 
 <h2 align="center">GitHub Pages:</h2>
